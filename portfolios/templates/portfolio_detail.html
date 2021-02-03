@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_content %}
+<h1 class="text-info">{{ portfolio.title }}</h1>
+<div class="row">
+   <div class="col-md-8">
+       <img src="{% static portfolio.image %}" alt="" width="100%">
+   </div>
+   <div class="col-md-4">
+       <h5>About the project:</h5>
+       <p>{{ portfolio.description }}</p>
+       <br>
+       <h5>Photographer</h5>
+       <p>{{ portfolio.photographer }}</p>
+       <br>
+       <h5>Camera used:</h5>
+       <p>{{ portfolio.camera }}</p>
+       <br>
+       <h5>Photo editor used:</h5>
+       <p>{{ portfolio.photo_editor }}</p>
+       <br>
+       <h5>Date:</h5>
+        <p>{{ portfolio.date }}</p>
+       <br>
+       <h5>Contact:</h5>
+        <p>{{ portfolio.contact }}</p>
+       <br>
+   </div>
+</div>
+{% endblock %}
